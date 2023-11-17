@@ -2,7 +2,7 @@
 SELECT
 
     FirstName,
-    IF(MiddleName IS NULL, 'UNKN', MiddleName) AS MiddleName,
+    IIF(MiddleName IS NULL, 'UNKN', MiddleName) AS MiddleName,
     ISNULL(MiddleName, 'UNKN') AS MiddleName2, -- offers cleanest code
     COALESCE (MiddleName, 'UNKN') AS MiddleName3,-- offers more functionality of code gets more complex
     LastName,
